@@ -8,7 +8,7 @@ RM = rm -f
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRC = ./src/*.c #TODO
+SRC = ./src/push_swap.c ./src/parse.c ./src/content.c#TODO
 OBJ = $(SRC:.c=.o)
 
 INCLUDES = -I./includes -I$(LIBFT_DIR)/includes

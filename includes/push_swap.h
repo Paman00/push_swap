@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 21:27:43 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/20 14:19:06 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/11/26 01:30:55 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,36 @@
 # include <stdlib.h> // malloc, free, exit
 
 # include "libft.h"
+
+typedef struct s_content
+{
+	int		value;
+	size_t	target_i;
+}	t_content;
+
+void		contentfree(void *content);
+t_content	*contentinit(int value);
+
+typedef struct s_push_swap
+{
+	t_stack	*a;
+	t_stack	*b;
+}	t_push_swap;
+
+void		stack_to_array(t_stack *stack, int *array, size_t size);
+int			add_indexes(t_stack *a, size_t size);
+int			parse_input(int argc, char *argv[], t_push_swap *ps);
+
+# define PS_SA "sa"
+# define PS_SB "sb"
+# define PS_SS "ss"
+# define PS_PA "pa"
+# define PS_PB "pb"
+# define PS_RA "ra"
+# define PS_RB "rb"
+# define PS_RR "rr"
+# define PS_RRA "rra"
+# define PS_RRB "rrb"
+# define PS_RRR "rrr"
 
 #endif

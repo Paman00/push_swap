@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   content.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 14:13:19 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/26 01:36:24 by migugar2         ###   ########.fr       */
+/*   Created: 2024/11/26 00:44:08 by migugar2          #+#    #+#             */
+/*   Updated: 2024/11/26 00:46:06 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+void	contentfree(void *content)
 {
-	t_push_swap	push_swap;
+	free(content);
+}
 
-	if (argc < 2)
-		return (1);
-	if (parse_input(argc, argv, &push_swap) == -1)
-		return (ft_putendl_fd(STDERR_FILENO, "Error"), 1);
+t_content	*contentinit(int value)
+{
+	t_content	*content;
+
+	content = (t_content *)malloc(sizeof(t_content));
+	if (content == NULL)
+		return (NULL);
+	content->value = value;
+	content->target_i = 0;
+	return (content);
 }
