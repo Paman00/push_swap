@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 21:27:43 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/26 01:30:55 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/11/27 21:57:42 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ typedef struct s_push_swap
 	t_stack	*b;
 }	t_push_swap;
 
+int			is_number(char *str);
+int			is_valid(char *str, long long atol, t_stack *a);
+
 void		stack_to_array(t_stack *stack, int *array, size_t size);
-int			add_indexes(t_stack *a, size_t size);
 int			parse_input(int argc, char *argv[], t_push_swap *ps);
 
 # define PS_SA "sa"
