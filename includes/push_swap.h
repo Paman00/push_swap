@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 21:27:43 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/30 15:42:45 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/11/30 19:16:40 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,13 @@ void		do_swap(t_push_swap *ps, char key);
 void		do_push(t_push_swap *ps, char key);
 void		do_rotate(t_push_swap *ps, char key);
 void		do_rev_rotate(t_push_swap *ps, char key);
+
+char		get_oposite(char key);
+int			is_sorted(t_stack *stack);
+
+void		push_shortest(t_push_swap *ps, t_stack *stack, char keyfrom);
+void		sort_3(t_push_swap *ps, t_stack *stack, char key);
+void		sort_5_or_less(t_push_swap *ps, t_stack *stack, char key);
 
 void		algorithm(t_push_swap *ps);
 
