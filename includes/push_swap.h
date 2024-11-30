@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 21:27:43 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/27 21:57:42 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/11/30 10:41:26 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,9 @@ int			parse_input(int argc, char *argv[], t_push_swap *ps);
 # define PS_RRA "rra"
 # define PS_RRB "rrb"
 # define PS_RRR "rrr"
+
+void		move(t_push_swap *ps, char *movement);
+
+void		algorithm(t_push_swap *ps);
 
 #endif
