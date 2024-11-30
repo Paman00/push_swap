@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:32:06 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/27 21:58:17 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/11/30 11:35:39 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static int	add_indexes(t_stack *a, size_t size)
 	while (node != NULL)
 	{
 		content = (t_content *)node->content;
-		content->target_i = ft_indexof(array, size, content->value);
-		if (content->target_i == size)
+		content->target_i = (int)ft_indexof(array, size, content->value);
+		if ((size_t)content->target_i == size)
 			return (free(array), -1);
 		node = node->next;
 	}
