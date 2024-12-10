@@ -6,19 +6,11 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:50:36 by migugar2          #+#    #+#             */
-/*   Updated: 2024/12/10 21:16:00 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/12/10 22:43:27 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-char	get_oposite(char key)
-{
-	if (key == 'b')
-		return ('a');
-	else
-		return ('b');
-}
 
 int	is_sorted(t_stack *stack)
 {
@@ -33,4 +25,37 @@ int	is_sorted(t_stack *stack)
 		node = node->next;
 	}
 	return (1);
+}
+
+int	get_max_index(t_stack *stack)
+{
+	t_dlist		*node;
+	int			max;
+
+	node = stack->top;
+	max = ((t_content *)node->content)->target_i;
+	while (node != NULL)
+	{
+		if (((t_content *)node->content)->target_i > max)
+			max = ((t_content *)node->content)->target_i;
+		node = node->next;
+	}
+	return (max);
+}
+
+int	get_position(t_stack *stack, int target_i)
+{
+	t_dlist		*node;
+	int			i;
+
+	node = stack->top;
+	i = 0;
+	while (node != NULL)
+	{
+		if (((t_content *)node->content)->target_i == target_i)
+			return (i);
+		node = node->next;
+		i++;
+	}
+	return (-1);
 }

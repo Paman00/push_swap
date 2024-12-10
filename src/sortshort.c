@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 21:15:32 by migugar2          #+#    #+#             */
-/*   Updated: 2024/12/10 21:29:54 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/12/10 22:44:19 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	push_a_shortest(t_push_swap *ps)
 	t_dlist	*shortest;
 	int		i;
 
-	node = ps->b->top;
+	node = ps->a->top;
 	shortest = node;
 	i = 0;
 	while (node != NULL)
@@ -107,7 +107,7 @@ void	sort_5_or_less_a(t_push_swap *ps)
 	}
 	else if (ps->a->size == 3)
 		sort_3_a(ps);
-	else if (ps->a->size == 4) // TODO: must implement a most efficient way for 4 or 5
+	else if (ps->a->size == 4) // TODO: must check if can implement a most efficient way for 4 or 5
 	{
 		push_b_shortest(ps);
 		sort_3_a(ps);
