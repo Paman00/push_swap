@@ -8,7 +8,7 @@ RM = rm -f
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRC = ./src/push_swap.c ./src/checkdata.c ./src/parse.c ./src/content.c ./src/moves.c ./src/algorithm.c ./src/printer.c ./src/utils.c
+SRC = ./src/push_swap.c ./src/checkdata.c ./src/parse.c ./src/push.c ./src/swap.c ./src/rotate.c ./src/revrotate.c ./src/content.c ./src/algorithm.c ./src/sortshort.c ./src/printer.c ./src/utils.c
 OBJ = $(SRC:.c=.o)
 
 INCLUDES = -I./includes -I$(LIBFT_DIR)/includes

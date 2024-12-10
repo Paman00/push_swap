@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 21:27:43 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/30 19:16:40 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/12/10 21:30:44 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,28 @@ char		*get_instruction(int instruction);
 void		printer_instruction(int instruction);
 void		end_printer_instruction(void);
 
-void		do_swap(t_push_swap *ps, char key);
-void		do_push(t_push_swap *ps, char key);
-void		do_rotate(t_push_swap *ps, char key);
-void		do_rev_rotate(t_push_swap *ps, char key);
+void		do_sa(t_push_swap *ps);
+void		do_sb(t_push_swap *ps);
+void		do_ss(t_push_swap *ps);
+
+void		do_pa(t_push_swap *ps);
+void		do_pb(t_push_swap *ps);
+
+void		do_ra(t_push_swap *ps);
+void		do_rb(t_push_swap *ps);
+void		do_rr(t_push_swap *ps);
+
+void		do_rra(t_push_swap *ps);
+void		do_rrb(t_push_swap *ps);
+void		do_rrr(t_push_swap *ps);
 
 char		get_oposite(char key);
 int			is_sorted(t_stack *stack);
 
-void		push_shortest(t_push_swap *ps, t_stack *stack, char keyfrom);
-void		sort_3(t_push_swap *ps, t_stack *stack, char key);
-void		sort_5_or_less(t_push_swap *ps, t_stack *stack, char key);
+void		push_a_shortest(t_push_swap *ps);
+void		push_b_shortest(t_push_swap *ps);
+void		sort_3_a(t_push_swap *ps);
+void		sort_5_or_less_a(t_push_swap *ps);
 
 void		algorithm(t_push_swap *ps);
 

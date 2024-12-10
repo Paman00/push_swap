@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm.c                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 10:37:56 by migugar2          #+#    #+#             */
-/*   Updated: 2024/12/10 21:31:20 by migugar2         ###   ########.fr       */
+/*   Created: 2024/12/10 19:33:24 by migugar2          #+#    #+#             */
+/*   Updated: 2024/12/10 19:39:05 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	algorithm(t_push_swap *ps)
+void	do_sa(t_push_swap *ps)
 {
-	if (is_sorted(ps->a))
-		return ;
-	if (ps->a->size <= 5)
-		sort_5_or_less_a(ps);
-	end_printer_instruction();
+	ft_stackswaptop(ps->a);
+	printer_instruction(PS_SA);
+}
+
+void	do_sb(t_push_swap *ps)
+{
+	ft_stackswaptop(ps->b);
+	printer_instruction(PS_SB);
+}
+
+void	do_ss(t_push_swap *ps)
+{
+	ft_stackswaptop(ps->a);
+	ft_stackswaptop(ps->b);
+	printer_instruction(PS_SS);
 }
