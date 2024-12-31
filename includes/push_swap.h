@@ -6,15 +6,15 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 21:27:43 by migugar2          #+#    #+#             */
-/*   Updated: 2024/12/31 08:17:27 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/12/31 09:14:57 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h> // read, write
-# include <stdlib.h> // malloc, free, exit
+# include <unistd.h>
+# include <stdlib.h>
 
 # include "libft.h"
 
