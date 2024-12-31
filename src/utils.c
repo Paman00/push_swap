@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:50:36 by migugar2          #+#    #+#             */
-/*   Updated: 2024/12/10 22:43:27 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/12/31 07:12:19 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	is_sorted(t_stack *stack)
 
 int	get_max_index(t_stack *stack)
 {
-	t_dlist		*node;
-	int			max;
+	t_dlist	*node;
+	int		max;
 
 	node = stack->top;
-	max = ((t_content *)node->content)->target_i;
+	max = -1;
 	while (node != NULL)
 	{
 		if (((t_content *)node->content)->target_i > max)
@@ -42,6 +42,7 @@ int	get_max_index(t_stack *stack)
 	}
 	return (max);
 }
+
 
 int	get_position(t_stack *stack, int target_i)
 {
