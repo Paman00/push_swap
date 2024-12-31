@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:50:36 by migugar2          #+#    #+#             */
-/*   Updated: 2024/12/31 07:12:19 by migugar2         ###   ########.fr       */
+/*   Updated: 2024/12/31 08:28:08 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	get_max_index(t_stack *stack)
 	}
 	return (max);
 }
-
 
 int	get_position(t_stack *stack, int target_i)
 {
