@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:32:06 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/30 11:35:39 by migugar2         ###   ########.fr       */
+/*   Updated: 2025/01/02 17:07:25 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ static int	parse_normal_input(int argc, char *argv[], t_push_swap *ps)
 	{
 		tmp = ft_atoll(argv[i]);
 		if (!is_valid(argv[i], tmp, ps->a))
-			return (ft_stackfree(&ps->a, contentfree), -1);
+			return (-1);
 		content = contentinit((int)tmp);
 		if (content == NULL)
-			return (ft_stackfree(&ps->a, contentfree), -1);
+			return (-1);
 		if (ft_stackpushnew(ps->a, content) == NULL)
-			return (ft_stackfree(&ps->a, contentfree), -1);
+			return (-1);
 		i--;
 	}
 	return (1);
