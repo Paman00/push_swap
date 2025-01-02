@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 16:46:25 by migugar2          #+#    #+#             */
-/*   Updated: 2025/01/02 18:03:45 by migugar2         ###   ########.fr       */
+/*   Updated: 2025/01/03 00:44:16 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ int	main(int argc, char **argv)
 	if (push_swap.b == NULL)
 		return (ft_stackfree(&push_swap.a, free),
 			ft_putendl_fd(2, "Error"), 1);
-	print_stack(push_swap.a);
+	readinput();
 	// checker(&push_swap); // checker reading from gnl(stdin)
+	print_stack(push_swap.a);
 	ft_stackfree(&push_swap.a, free);
 	ft_stackfree(&push_swap.b, free);
 }

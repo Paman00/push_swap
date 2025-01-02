@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:02:57 by migugar2          #+#    #+#             */
-/*   Updated: 2024/11/13 12:10:39 by migugar2         ###   ########.fr       */
+/*   Updated: 2025/01/03 00:24:24 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@
 # include <stdio.h>
 # include "libft.h"
 
-char	*extract_line(char **saved);
 char	*read_until_eol_eof(int fd, char **saved, char **buffer);
 
-char	*get_next_line(int fd);
+ssize_t	get_next_line(int fd, char **empty);
 
 #endif

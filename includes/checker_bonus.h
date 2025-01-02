@@ -6,7 +6,7 @@
 /*   By: migugar2 <migugar2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 16:46:47 by migugar2          #+#    #+#             */
-/*   Updated: 2025/01/02 18:07:36 by migugar2         ###   ########.fr       */
+/*   Updated: 2025/01/03 00:44:39 by migugar2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int			is_number(char *str);
 int			is_valid(char *str, long long atol, t_stack *a);
 
 int			parse_input(int argc, char *argv[], t_push_swap *ps);
+
+int			readinput(void);
 
 #endif
