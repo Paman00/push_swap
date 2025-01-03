@@ -2,7 +2,7 @@ NAME = push_swap
 NAME_BONUS = checker
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror $(INCLUDES) -g3 -fsanitize=address,leak,undefined
+CFLAGS = -Wall -Wextra -Werror $(INCLUDES)# -g3 -fsanitize=address,leak,undefined
 
 RM = rm -f
 
